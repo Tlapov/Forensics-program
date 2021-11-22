@@ -1,0 +1,54 @@
+Hair_color = {"Black" : "CCAGCAATCGC",
+              "Brown" : "GCCAGTGCCG",
+              "Blonde" : "TTAGCTATCGC"
+              }
+Face_shape = {"Square": "GCCACGG",
+                "Round" : "ACCACAA",
+                "Oval": "AGGCCTCA"
+               }
+Eye_color = {"Blue": "TTGTGGTGGC",
+             "Green": "GGGAGGTGGC",
+             "Brown": "AAGTAGTGAC"
+             }
+Gender = {"Female": "TGAAGGACCTTC",
+          "Male": "TGCAGGAACTTC"}
+Race = {"White": "AAAACCTCA",
+        "Black": "CGACTACAG",
+        "Asian": "CGCGGGCCG"
+        }
+
+
+
+
+Eva = {"Gender": Gender["Female"], "Race": Race["White"], "Hair_color": Hair_color["Blonde"], "Eye_color": Eye_color["Blue"], "Face_shape": Face_shape["Oval"]}
+Larisa = {"Gender": Gender["Female"], "Race": Race["White"], "Hair_color": Hair_color["Brown"], "Eye_color": Eye_color["Brown"], "Face_shape": Face_shape["Oval"]}
+Matej = {"Gender": Gender["Male"], "Race": Race["White"], "Hair_color": Hair_color["Black"], "Eye_color": Eye_color["Blue"], "Face_shape": Face_shape["Oval"]}
+Miha = {"Gender": Gender["Male"], "Race": Race["White"], "Hair_color": Hair_color["Brown"], "Eye_color": Eye_color["Green"], "Face_shape": Face_shape["Square"]}
+
+
+with open("dna.txt", "r") as dna:
+          solve = dna.read()
+
+
+          if Eva["Gender"] and Eva["Race"] and Eva["Eye_color"] and Eva["Hair_color"] and Eva["Face_shape"] in solve:
+              print ("Eva je okrivljenik ")
+          else:
+              print("Eva nije okrivljenik")
+
+
+          if Larisa["Gender"] and Larisa["Race"] and Larisa["Eye_color"] and Larisa["Hair_color"] and Larisa["Face_shape"] in solve:
+              print ("Larisa je okrivljenik ")
+          else:
+              print("Larisa nije okrivljenik")
+
+          if Matej["Gender"] and Matej["Race"] and Matej["Eye_color"] and Matej["Hair_color"] and Matej["Face_shape"] in solve:
+              print ("Matej je okrivljenik ")
+          else:
+              print("Matej nije okrivljenik")
+
+
+          if Miha["Gender"] and Miha["Race"] and Miha["Eye_color"] and Miha["Hair_color"] and Miha["Face_shape"] in solve:
+              print ("Miha je okrivljenik")
+          else:
+              print("Miha nije okrivljenik")
+
